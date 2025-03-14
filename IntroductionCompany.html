@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Introduction</title>
+    <link rel="stylesheet" href="IntroductionCompany.css">
+    <style>
+       
+
+        h1 {
+            color: #f8f2f2;
+        }
+
+        #myForm {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: rgb(238, 127, 15);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+           box-shadow: 0 5px 15px rgba(243, 239, 239, 0.4);;
+        }
+
+        button:hover {
+            background-color: rgb(249, 250, 252);
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="fade-in">Welcome to <span class="highlight">Akhilion Tech</span></h1>
+            <p class="fade-in">Empowering businesses with innovative solutions and cutting-edge technology.</p>
+            <button class="btn glow-on-hover" onclick="scrollToSection('about')">Explore More</button>
+        </div>
+    </header>
+
+    <section id="about" class="about-section slide-in">
+        <h2>About Us</h2>
+        <p>Our mission is to bring groundbreaking innovations to life, helping industries evolve and thrive in the modern age. With a talented team and a vision to inspire, we are dedicated to excellence.</p>
+    </section>
+
+    <section class="cards">
+        <div class="card bounce-in">
+            <img src="https://d3nwecxvwq3b5n.cloudfront.net/AcuCustom/Sitename/DAM/023/iStock-1363405922.jpg" alt="Innovation">
+            <h3>Innovation</h3>
+            <p>Leading the way in cutting-edge solutions for modern problems.</p>
+        </div>
+        <div class="card bounce-in">
+            <img src="https://img.freepik.com/premium-photo/teamwork-business-human-resources_31965-1842.jpg?w=2000" alt="Teamwork">
+            <h3>Teamwork</h3>
+            <p>Collaborating to achieve the extraordinary every day.</p>
+        </div>
+        <div class="card bounce-in">
+            <img src="https://th.bing.com/th/id/R.69c61b54e7387821e07bc5d791b76b4e?rik=aQeQDSE3EEW3iA&riu=http%3a%2f%2fabrn.asia%2fojs%2fpublic%2fjournals%2f3%2farticle_60_cover_en_US.jpg&ehk=NJwCK5hLRFqiAa6wC%2bYJraEUJrxfDJcGhtM0x7YhUMQ%3d&risl=&pid=ImgRaw&r=0" alt="Growth">
+            <h3>Growth</h3>
+            <p>Fostering sustainable growth for our clients and our team.</p>
+        </div>
+    </section>
+    <form id="myForm">
+        <button type="button" onclick="goToPage()">Next</button>
+    </form>
+
+    <script>
+        function goToPage() {
+            window.location.href = "IntroductionCompany1.html";
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2025 Akhilion Tech. All rights reserved.</p>
+    </footer>
+
+    <script src="IntroductionCompany.js"></script>
+</body>
+</html>

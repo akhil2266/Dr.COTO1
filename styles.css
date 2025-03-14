@@ -1,0 +1,402 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    /* background-image: url("logo.png");
+    background-position: 100px 50px; */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Navigation */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('cityscape.jpg') center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero .search-bar {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.hero input,
+.hero select {
+    padding: 10px;
+    font-size: 1rem;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.hero button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background-color: #0056b3;
+}
+
+/* Featured Properties Section */
+.featured-properties {
+    background-color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.property-card {
+    display: inline-block;
+    width: 300px;
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.property-card:hover {
+    transform: scale(1.05);
+}
+
+.property-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.property-card .price {
+    font-size: 1.2rem;
+    color: #007BFF;
+    margin-top: 10px;
+}
+
+.property-card .description {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.property-card .details-link {
+    text-decoration: none;
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.property-card .details-link:hover {
+    background-color: #0056b3;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.pagination button:hover {
+    background-color: #0056b3;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #f9f9f9;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.testimonial {
+    display: none;
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial.active {
+    display: block;
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+.testimonial .author {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* About Us Page */
+.about-us {
+    padding: 2rem 0;
+    background-color: white;
+    text-align: center;
+}
+
+.about-us h2 {
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.team-member p {
+    font-size: 1rem;
+}
+
+/* Contact Page */
+.contact {
+    padding: 2rem 0;
+    background-color: white;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.contact button:hover {
+    background-color: #0056b3;
+}
+
+/* Contact Info Section */
+.contact-info {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.contact-info h2 {
+    font-size: 1.8rem;
+}
+
+.contact-info p {
+    font-size: 1rem;
+}
+
+.contact-info .map {
+    margin-top: 20px;
+}
+
+/* Login/Register Page */
+.login-register {
+    padding: 2rem 0;
+    background-color: white;
+    text-align: center;
+}
+
+.login-register .form-container {
+    margin-bottom: 40px;
+}
+
+.login-register form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-register label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.login-register input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-register button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.login-register button:hover {
+    background-color: #0056b3;
+}
+
+.social-login {
+    margin-top: 20px;
+}
+
+.social-login button {
+    padding: 10px 20px;
+    background-color: #db4437; /* Google Red */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.social-login button:first-of-type {
+    background-color: #3b5998; /* Facebook Blue */
+}
+
+.social-login button:hover {
+    opacity: 0.8;
+}
+
+/* Media Queries (Responsive Design) */
+@media (max-width: 768px) {
+    .team {
+        flex-direction: column;
+    }
+
+    .testimonial {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .contact form {
+        width: 90%;
+    }
+
+    .login-register form {
+        width: 90%;
+    }
+}

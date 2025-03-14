@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Login</title>
+    <link rel="stylesheet" href="FacebookSignin.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login with Facebook</h2>
+        <div class="fb-login-button" 
+             data-width="" 
+             data-size="large" 
+             data-button-type="continue_with" 
+             data-layout="default" 
+             data-auto-logout-link="false" 
+             data-use-continue-as="false">
+        </div>
+    </div>
+
+    <!-- Facebook SDK Script -->
+    <script>
+        // Load the Facebook SDK for JavaScript
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : 'your-app-id',  // Replace with your Facebook app ID
+                cookie     : true,  // Enable cookies to allow the server to access the session
+                xfbml      : true,  // Parse social plugins on this page
+                version    : 'v16.0' // Use the latest version of the Graph API
+            });
+
+            FB.AppEvents.logPageView();   // Log the page view event
+        };
+
+        // Load the SDK asynchronously
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <script>
+        // Function to handle the login response
+        function checkLoginState() {
+            FB.getLoginStatus(function(response) {
+                if (response.status === 'connected') {
+                    console.log('Successfully logged in with Facebook:', response);
+                    // Optionally, you can retrieve the user's information here
+                    FB.api('/me', function(response) {
+                        console.log('Successful login for: ' + response.name);
+                    });
+                } else {
+                    console.log('User cancelled login or did not fully authorize.');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

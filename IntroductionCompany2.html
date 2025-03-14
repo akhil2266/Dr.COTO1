@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akhilion Tech</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('https://img.freepik.com/premium-photo/compelling-4k-image-illustrating-concept-investment-growth_717732-10673.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.8);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .container {
+            padding: 50px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1, h2 {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #f39c12, #d35400);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientAnimation 3s infinite alternate;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 20px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1rem;
+            color: white;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(219, 208, 208, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        section {
+            padding: 50px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8rem;
+            background: #333;
+        }
+
+        /* Keyframes */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes gradientAnimation {
+            from { background-position: 0%; }
+            to { background-position: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <h1>Welcome to Akhilion Tech</h1>
+        <p>Your go-to partner for cutting-edge technology solutions and innovative business practices.</p>
+    </div>
+
+    <!-- About Us Section -->
+    <section>
+        <h2>About Us</h2>
+        <p>
+            Established in 2025,<strong> Akhilion Tech</strong> has been at the forefront of technology-driven transformations. 
+            Our passionate team of experts delivers reliable solutions that help our clients thrive in the digital age.
+        </p>
+    </section>
+
+    <!-- Services Section -->
+    <section>
+        <h2>Our Services</h2>
+        <p>
+            Explore a wide range of services tailored to meet your unique needs:
+        </p>
+        <ul style="list-style: none; text-align: left; max-width: 700px; margin: 0 auto; padding: 0;">
+            <li>✔ Custom Software Development</li>
+            <li>✔ Mobile App Solutions</li>
+            <li>✔ Artificial Intelligence and Machine Learning Integration</li>
+            <li>✔ Modern Web Design & Development</li>
+            <li>✔ Cloud and DevOps Solutions</li>
+        </ul>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section>
+        <h2>Why Choose Us</h2>
+        <p>Here’s why our clients love working with us:</p>
+        <ul style="list-style: none; text-align: left; max-width: 700px; margin: 0 auto; padding: 0;">
+            <li>✔ A customer-centric approach that puts your needs first.</li>
+            <li>✔ Proven track record of success in multiple industries.</li>
+            <li>✔ Emphasis on innovation and creativity.</li>
+            <li>✔ Team of highly skilled and motivated professionals.</li>
+        </ul>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section>
+        <h2>Testimonials</h2>
+        <blockquote style="font-size: 1.2rem; font-style: italic; max-width: 700px; margin: 0 auto;">
+            "The team at <strong>  Akhilion Tech</strong> transformed our business operations. 
+            We are now more efficient, streamlined, and poised for growth!" – <b>Akhil Mudavath,<br>  CEO of Akhilion tech</b>
+        </blockquote>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section>
+        <h2>Contact Us</h2>
+        <p>Ready to take the next step? Get in touch with us today!</p>
+        <p>Email: contact@akhiliontech.com | Phone: (123) 456-7890</p>
+        <a href="contact.html" class="button">Send Us a Message</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Akhilion tech. All rights reserved. Designed with care and passion.
+    </footer>
+</body>
+</html>

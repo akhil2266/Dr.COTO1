@@ -1,0 +1,69 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image:url ("../C:/Users/mudav/OneDrive/AKHIL/akhil pic.jpg");
+    background-size: cover;
+    background-position: center;
+    
+  }
+  
+  .signup-container {
+    background-color: #f8f8f8;
+    max-width: 400px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signup-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .signup-form input, .signup-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .signup-form button {
+    background-color: #00e068;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .signup-form button:hover {
+    background-color: #09eb2f;
+  }
+  
+  .signup-form p {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .signup-form a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .signup-form a:hover {
+    text-decoration: underline;
+  }
+  

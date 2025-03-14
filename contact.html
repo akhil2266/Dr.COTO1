@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with our real estate company. We are here to help you with any property-related inquiries.">
+    <meta name="keywords" content="contact us, real estate inquiries, get in touch, property questions">
+    <title>Contact Us - Akhilion Tech Company</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        async function handleSubmit(event) {
+            event.preventDefault(); // Prevent form refresh
+
+            const message = document.getElementById('message').value;
+
+            try {
+                const response = await fetch('http://localhost:3000/api/submit-request', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message }),
+                });
+
+                if (response.ok) {
+                    alert('Request Submitted!');
+                } else {
+                    alert('Failed to submit your request.');
+                }
+            } catch (error) {
+                console.error('Error submitting request:', error);
+                alert('Sorry! for inconvinence, Our DataBase was not updated please wait for a while and resend it!.');
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="property-listings.html">Property Listings</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="accountDETAILS.html">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Form -->
+    <section class="contact">
+        <h1>Contact Us</h1>
+        <p>If you have any questions or would like more information about our properties, feel free to reach out to us!</p>
+
+        <!-- <form action="submit_form.php" method="POST" class="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit" id="closePopup">Submit</button>
+        </form> -->
+        <form onsubmit="handleSubmit(event)">
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+            <br><br>
+            <p style="color: brown;"> Remember: You have to send the message with your full complete details like, email, username, and phone number. With these information we can able to sort out your issue as soon as possible,  100% your issue will be sorted, when you send message with your complete details and what type of issue you are facing. </p>
+            <button type="submit">Submit</button>
+        </form>
+        <!-- Company Info & Location -->
+        <div class="contact-info">
+            <h2>Akhilion Tech</h2>
+            <p><strong>Akhilion Estate Corporation </strong></p>
+           
+            <p>Phone: (+91) 123-456-7890</p>
+            <p>Email: mudavathakhil8384@outlook.com</p>
+            <p>Office Hours: Mon-Fri, 9 AM - 5 PM</p>
+
+            <!-- Embed a map using Google Maps (you would need to replace the iframe link with an actual map) -->
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12345678!2d-122.4194!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzc0NzA2NzgzMTMwNzc3NjHnmNqfXzmfzw9w!5e0!3m2!1sen!2sus!4v1583861329840!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-media">
+            <!-- <a href="#">Facebook</a>
+            <a href="#">Twitter</a> -->
+            <a href="https://instagram.com/am.akhil_actor" target="_blank"> Instagram</a>
+        </div>
+        <div class="company-info">
+            <a href="IntroductionCompany.html">2024 Akhilion Tech. All Rights Reserved.</a><br>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </div>
+    </footer>
+
+</body>
+</html>
